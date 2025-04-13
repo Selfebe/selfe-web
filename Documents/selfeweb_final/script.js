@@ -1,1 +1,1 @@
-console.log("Selfe läuft!");
+console.log("Selfe läuft!")
