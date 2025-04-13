@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selfe - Willkommen</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selfe – Die Textbasierte Social Media Plattform</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app">
-        <h1>Willkommen bei Selfe!</h1>
-        <p>Erstelle dein Profil, chatte sicher — ohne Bilder, nur Text!</p>
-        <button onclick="window.location.href='login.html'">Jetzt Anmelden</button>
-    </div>
+  <!-- Hauptcontainer -->
+  <div class="main-container">
+    <!-- Header -->
+    <header>
+      <h1>Willkommen bei Selfe</h1>
+      <button id="colorToggle" onclick="toggleColorScheme()">Farben ändern</button>
+    </header>
+
+    <!-- Anmeldebereich -->
+    <section id="signup-section">
+      <h2>Erstelle dein Profil</h2>
+      <form id="signup-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        
+        <label for="location">Wohnort (freiwillig):</label>
+        <input type="text" id="location">
+        
+        <label for="bio">Über mich (max. 500 Wörter):</label>
+        <textarea id="bio" maxlength="500" required></textarea>
+        
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" required>
+        
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" required>
+        
+        <button type="submit">Registrieren</button>
+      </form>
+    </section>
+
+    <!-- Profilbereich -->
+    <section id="profile-section" style="display:none;">
+      <h2>Profil von <span id="username-display"></span></h2>
+      <p id="bio-display"></p>
+      <button id="chatButton">Chat starten</button>
+    </section>
+
+    <!-- Chatbereich -->
+    <section id="chat-section" style="display:none;">
+      <h2>Chat mit <span id="chat-username"></span></h2>
+      <div id="chat-messages"></div>
+      <input type="text" id="chat-input" placeholder="Schreib eine Nachricht..." oninput="checkMessage()">
+      <button id="sendMessage" disabled>Nachricht senden</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
