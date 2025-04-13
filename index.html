@@ -1,8 +1,13 @@
+ HEAD
+
+<!-- index.html 
+ ae7e0a3 (Selfe Grundgerüst erstellt)
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ HEAD
     <title>Selfe — Die Textbasierte Community</title>
     <style>
         body {
@@ -34,5 +39,31 @@
     <h1>Willkommen bei Selfe</h1>
     <p>Die sichere, bunte und textbasierte Community ohne Bilder!</p>
     <button class="neon" onclick="alert('Bunte Farben sind aktiv!')">Style ändern</button>
+    <title>Selfe - Deine sichere Text-Community</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="retro-theme">
+    <header>
+        <h1 class="logo">Selfe</h1>
+        <button id="themeButton">Wechsel die Farben!</button>
+    </header>
+    <main>
+        <section class="login">
+            <h2>Willkommen bei Selfe</h2>
+            <form id="loginForm">
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Passwort:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Anmelden</button>
+            </form>
+            <p>Noch kein Konto? <a href="register.html">Registrieren</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Selfe - Alle Rechte vorbehalten</p>
+    </footer>
+    <script src="js/script.js"></script>
+ae7e0a3 (Selfe Grundgerüst erstellt)
 </body>
 </html>
